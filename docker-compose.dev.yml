@@ -1,0 +1,13 @@
+---
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rss-proxy-transformer
+    cpus: 0.5
+    mem_limit: 200m
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
